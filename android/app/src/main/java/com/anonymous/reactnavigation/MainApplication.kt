@@ -1,4 +1,4 @@
-package com.reactnavigation
+package com.anonymous.reactnavigation
 
 import android.app.Application
 import android.content.res.Configuration
