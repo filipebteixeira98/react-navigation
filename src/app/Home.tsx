@@ -1,13 +1,15 @@
-import { useNavigation } from "@react-navigation/native";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { View } from "react-native";
 
 import { ButtonIcon } from "@/components/ButtonIcon";
 import { Header } from "@/components/Header";
 import { Title } from "@/components/Title";
 
-export function Home() {
-  const navigation = useNavigation();
+import type { StackRoutesList } from "@/routes/StackRoutes";
 
+type HomeProps = NativeStackScreenProps<StackRoutesList, "home">;
+
+export function Home({ navigation }: HomeProps) {
   return (
     <View style={{ flex: 1, padding: 32, paddingTop: 54 }}>
       <Header>
