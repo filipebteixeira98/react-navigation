@@ -1,5 +1,7 @@
-import type { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {
+  createNativeStackNavigator,
+  type NativeStackScreenProps,
+} from "@react-navigation/native-stack";
 
 import { Home } from "@/app/Home";
 import { Product } from "@/app/Product";
