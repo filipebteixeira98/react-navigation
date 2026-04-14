@@ -5,11 +5,11 @@ import { ButtonIcon } from "@/components/ButtonIcon";
 import { Header } from "@/components/Header";
 import { Title } from "@/components/Title";
 
-import type { StackRoutesProps } from "@/routes/StackRoutes";
+import type { BottomTabRoutesProps } from "@/routes/BottomRoutes";
 
-type ProductRouteProps = StackRoutesProps<"product">;
+type ProductRouteProps = BottomTabRoutesProps<"product">;
 
-export function Product({ navigation }: StackRoutesProps<"product">) {
+export function Product({ navigation }: BottomTabRoutesProps<"product">) {
   const { params } = useRoute<ProductRouteProps["route"]>();
 
   return (
