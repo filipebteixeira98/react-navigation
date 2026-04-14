@@ -5,11 +5,11 @@ import { ButtonIcon } from "@/components/ButtonIcon";
 import { Header } from "@/components/Header";
 import { Title } from "@/components/Title";
 
-import type { BottomTabRoutesProps } from "@/routes/BottomRoutes";
+import type { DrawerRoutesProps } from "@/routes/DrawerRoutes";
 
-type ProductRouteProps = BottomTabRoutesProps<"product">;
+type ProductRouteProps = DrawerRoutesProps<"product">;
 
-export function Product({ navigation }: BottomTabRoutesProps<"product">) {
+export function Product({ navigation }: DrawerRoutesProps<"product">) {
   const { params } = useRoute<ProductRouteProps["route"]>();
 
   return (
