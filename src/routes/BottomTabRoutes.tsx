@@ -1,3 +1,4 @@
+import { MaterialIcons } from "@expo/vector-icons";
 import {
   type BottomTabScreenProps,
   createBottomTabNavigator,
@@ -20,10 +21,33 @@ export function BottomTabRoutes() {
   return (
     <BottomTab.Navigator
       initialRouteName="home"
-      screenOptions={{ headerShown: false }}
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "#2c46b1",
+        tabBarInactiveTintColor: "#444444",
+        tabBarLabelPosition: "beside-icon",
+      }}
     >
-      <BottomTab.Screen name="home" component={Home} />
-      <BottomTab.Screen name="product" component={Product} />
+      <BottomTab.Screen
+        name="home"
+        component={Home}
+        options={{
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="product"
+        component={Product}
+        options={{
+          tabBarLabel: "Product",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="add-circle" color={color} size={size} />
+          ),
+        }}
+      />
     </BottomTab.Navigator>
   );
 }
